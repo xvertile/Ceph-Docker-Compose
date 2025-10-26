@@ -49,5 +49,3 @@ networks:
       driver: default
       config:
         - subnet: 192.168.105.0/24
-                                                                                                                                                                                             69,1          Bot
-
