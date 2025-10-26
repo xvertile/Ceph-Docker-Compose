@@ -9,17 +9,14 @@ services:
      privileged: true
      user: root
      hostname: ceph-s3
-     LANG: en_US.utf8
-     TZ: UTC
      volumes:
        - ./ceph_conf:/etc/ceph
        - ./ceph_data:/var/lib/ceph
        - ./osd:/var/lib/ceph/osd
-     command: mon
-     command: mgr
-     command: osd_directory
-     command: rgw
+     command: demo
      environment:
+       - LANG=en_US.utf8
+       - TZ=UTC
        - customize-failure-domain=true
        - RGW_FRONTEND_PORT=7480
        - SREE_PORT=5001
